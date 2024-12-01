@@ -171,7 +171,7 @@
   }
 
   .shad-sheet {
-    @apply pt-0 !important;
+    @apply pt-2 !important;
   }
   .shad-sheet button,
   .shad-dialog button {
