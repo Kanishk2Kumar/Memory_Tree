@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Search from "@/components/Search";
 import FileUploader from "@/components/FileUploader";
-
+import { signOutUser } from "@/lib/actions/user.actions";
 
 const Header = ({
   userId,
@@ -21,7 +21,7 @@ const Header = ({
           action={async () => {
             "use server";
 
-            // await signOutUser();
+            await signOutUser();
           }}
         >
           <Button type="submit" className="sign-out-button">
