@@ -5,7 +5,7 @@ import { getCuurentUser } from "@/lib/actions/user.actions"
 import { redirect } from "next/navigation"
 import { Toaster } from "@/components/ui/toaster"
 
-export const dynamic = "-dynamic";
+export const dynamic = "force-dynamic";
 
 const Layout = async ({children}: {children: React.ReactNode}) => {
     const currentUser = await getCuurentUser();
