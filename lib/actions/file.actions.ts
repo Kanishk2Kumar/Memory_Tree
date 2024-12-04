@@ -234,3 +234,27 @@ export async function getTotalSpaceUsed() {
     handleError(error, "Error calculating total space used:, ");
   }
 }
+export const getRecentlyUploadedFiles = async (limit = 10) => {
+  const { databases } = await createAdminClient();
+
+  try {
+    const currentUser = await getCuurentUser();
+    if (!currentUser) throw new Error("User is not authenticated.");
+
+    // Fetch files owned by the current user and sort by creation date
+    const files = await databases.listDocuments(
+      appwriteConfig.databaseId,
+      appwriteConfig.filesCollectionId,
+      [
+        Query.equal("owner", [currentUser.$id]),
+        Query.orderDesc("$createdAt"),
+        Query.limit(limit),
+      ],
+    );
+
+    return parseStringfy(files.documents);
+  } catch (error) {
+    handleError(error, "Failed to fetch recently uploaded files");
+    return [];
+  }
+};
