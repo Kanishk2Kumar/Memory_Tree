@@ -7,26 +7,20 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       <section className="hidden w-1/2 items-center justify-center bg-brand p-10 lg:flex xl:w-2/5">
         <div className="flex max-h-[800px] max-w-[430px] flex-col justify-center space-y-12">
           <Image
-            src="/assets/icons/logo-full.svg"
+            src="/assets/icons/Full-Logo.png"
             alt="logo"
-            width={224}
-            height={82}
+            width={258}
+            height={122}
             className="h-auto"
           />
 
           <div className="space-y-5 text-white">
-            <h1 className="h1">Manage your files the best way</h1>
+            <h1 className="h1">Keep the Good Times Together</h1>
             <p className="body-1">
-              This is a place where you can store all your documents.
+              This is a place where you can store all your memories.
             </p>
           </div>
-          <Image
-            src="/assets/images/files.png"
-            alt="Files"
-            width={342}
-            height={342}
-            className="transition-all hover:rotate-2 hover:scale-105"
-          />
+          
         </div>
       </section>
 

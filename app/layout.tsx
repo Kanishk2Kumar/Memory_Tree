@@ -10,8 +10,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "StoreIt",
-  description: "StoreIt - The only storage solution you need.",
+  title: "Memory Tree",
+  description: "Memory Tree - A place where you can store all your memories.",
 };
 
 export default function RootLayout({
