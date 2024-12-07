@@ -29,8 +29,8 @@ const MobileNavigation = ({ $id:ownerId, accountId ,fullName, avatar, email }: P
   const pathname = usePathname();
   return (
     <header className="mobile-header">
-      <Image src="/assets/icons/logo-full-brand.svg"
-      alt="logo" width={120} height={50} className="h-auto"
+      <Image src="/assets/icons/Full-Logo-Rounded.png"
+      alt="logo" width={120} height={30} className="rounded-xl"
       />
       <Sheet>
         <SheetTrigger>
